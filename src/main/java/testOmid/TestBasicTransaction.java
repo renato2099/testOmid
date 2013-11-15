@@ -99,7 +99,7 @@ public class TestBasicTransaction {
             // Only sees what it has modified
             r = tt.get(t2, g);
             dataObtained = Bytes.toString(getValue(r, TEST_FAMILY, col));
-            LOG.info(data2.equals(dataObtained)?"Tran worked as expected.":"Tran did not work as expected." + dataObtained);
+            LOG.info(data1.equals(dataObtained)?"Tran worked as expected.":"Tran did not work as expected." + dataObtained);
 
             // trying to read uncommitted 
             r = tt.get(tread, g);
